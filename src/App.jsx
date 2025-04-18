@@ -32,7 +32,7 @@ function App() {
       <p class="text-gray-400 text-center mb-8">Sign in to continue your cybersecurity journey</p>
       <button onClick={handleLogin}>
         <img
-          src="/public/Google_Icons-09-512.webp"
+          src="/assets/Google_Icons-09-512.webp"
           alt="Google icon"
         /> 
            Sign in With Google
