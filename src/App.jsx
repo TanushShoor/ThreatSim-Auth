@@ -3,14 +3,18 @@ import {auth, provider} from './firebase';
 import { signInWithRedirect, getRedirectResult } from 'firebase/auth';
 import './App.css'
 
+
 function App() {
   useEffect(() => {
+
     getRedirectResult(auth)
       .then ((result) => {
         console.log("hi");
         if(result?.user){
           console.log("User Infor:", result.user);
           alert(`Welcome ${result.user.displayName}`);
+          // Redirect to the main application page
+          window.location.href = 'https://threat-sim.vercel.app';
         }
       })
       .catch((error) => {
